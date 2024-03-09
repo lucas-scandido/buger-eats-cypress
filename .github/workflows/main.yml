@@ -16,5 +16,5 @@ jobs:
           install-command: yarn install
           wait-on-timeout: 120
           browser: chrome
-          group: 'UI - Chrome'
+          group: 'E2E Tests - Chrome'
           spec: cypress/e2e/*
