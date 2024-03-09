@@ -1,0 +1,11 @@
+{
+  "name": "buger-eats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "cypress-drag-drop": "^1.1.1",
+    "faker-br": "^0.4.1"
+  }
+}
