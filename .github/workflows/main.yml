@@ -10,11 +10,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: 'E2E Tests - Chrome'
+      
+      - name: Build
+        run: yarn install
+
+      - name: E2E Tests - Chrome
         uses: cypress-io/github-action@v6
         with:
-          install-command: yarn install
-          wait-on-timeout: 120
           browser: chrome
-          group: 'E2E Tests - Chrome'
           spec: cypress/e2e/*
