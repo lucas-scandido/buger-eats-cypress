@@ -1,6 +1,6 @@
 # Buger Eats - Cadastro de Entregadores 🛵📍
 
-## Este projeto de automação de testes E2E foi realizado através da aplicação **[Buger Eats](https://buger-eats-qa.vercel.app)**, desenvolvida pelo **[Fernando Papito](https://www.linkedin.com/in/papitoio/)** para os alunos de seus cursos que estão disponíveis na plataforma da **[QAx](https://qax.com.br/pt/cursos)**.
+- Este projeto de automação de testes E2E foi realizado através da aplicação **[Buger Eats](https://buger-eats-qa.vercel.app)**, desenvolvida pelo **[Fernando Papito](https://www.linkedin.com/in/papitoio/)** para os alunos de seus cursos que estão disponíveis na plataforma da **[QAx](https://qax.com.br/pt/cursos)**.
 
 ## Pré-requisitos
 1. IDE de sua preferência.
@@ -9,7 +9,7 @@
 4. Versão do **cypress** `≥ 13.6.6`.
 
 ## Instalação:
-1. Clone o projeto: ``.
+1. Clone o projeto: `gh repo clone lucas-scandido/cypress-buger-eats`.
 2. Rode o script `yarn / npm install` para instalar as dependências do projeto.
 
 ## Configurações do projeto:
