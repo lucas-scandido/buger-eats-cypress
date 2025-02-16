@@ -1,38 +1,65 @@
 # Buger Eats - Cadastro de Entregadores 🛵📍
 
-- Este projeto de automação de testes E2E foi realizado através da aplicação **[Buger Eats](https://buger-eats-qa.vercel.app)**, desenvolvida pelo **[Fernando Papito](https://www.linkedin.com/in/papitoio/)** para os alunos de seus cursos que estão disponíveis na plataforma da **[QAx](https://qax.com.br/pt/cursos)**.
+Projeto de automação de testes E2E para a aplicação **[Buger Eats](https://buger-eats-qa.vercel.app)**.
+
+Este projeto é utilizado como fase de estudos para o framework de automação Cypress, para os alunos dos cursos da antiga plataforma **QAx**.
 
 ## Pré-requisitos
-1. IDE de sua preferência.
-2. Versão do **node** `≥ v20.11.0`.
-3. Versão do **yarn/npm** `≥ 1.22.21 / 10.5.0`.
-4. Versão do **cypress** `≥ 13.6.6`.
+1. Versão do **`node`** `>=20.17.0`
+2. Versão do **`yarn/npm`** `>=1.22.22 / 10.8.3`
+3. Versão do **`cypress`** `>=14.0.3`
 
-## Instalação:
-1. Clone o projeto: `gh repo clone lucas-scandido/cypress-buger-eats`.
-2. Rode o script `yarn / npm install` para instalar as dependências do projeto.
 
-## Configurações do projeto:
-- Por se tratar de uma aplicação pequena, apenas para cadastro de entregadores, foi utilizado a técnica de isolamento de testes desativada `(testIsolation: false)`. Portanto especificamente nos cenários de `validações de elementos da página` e de `cenários alterantivos`, o teste não alterará o contexto do navegador antes do início do teste, fazendo com que o teste ganhe mais performance executando mais rápido.
-- Foi adicionado 2 `custom commands` com o intuito de manter a boa prática e evitar linhas de repetição de código.
-- O restante das configurações foi mantidas por `default`.
-- Por se tratar de uma aplicação para estudos e que nao possui outros ambientes não foram adicionados scripts personalizados.
+## Instalação
+##### 1. Clone o repositório:
+```
+https://github.com/lucas-scandido/buger-eats-cypress.git
+```
 
-## Cenários de Testes:
+##### 2. Navegue até o diretório:
+```
+cd buger-eats-cypress
+```
 
-1. Página Inicial:
+##### 3. Instale as dependências:
+```
+yarn install
+    ou
+npm install
+```
 
-| TESTE | STATUS |
-| ----- | ----- |
-| Deve validar se os textos e o botão para cadastrar estão visíveis | ✅ |
+## Documentações relevantes
+- **Documentação do Cypress:**
+1. [Cypress](https://docs.cypress.io/)
+2. [Custom Commands](https://docs.cypress.io/api/cypress-api/custom-commands/)
 
-2. Cadastro de Entregadores (Deliver)
+## Estrutura de Projeto
+- O projeto foi desenvolvido utilizando o padrão de `Custom Commands`. Este padrão foi escolhido, pois ajuda melhorar a eficiência, legibilidade e manutenção dos testes, tornando o desenvolvimento de testes mais ágil e menos propenso a erros. 
 
-| TESTE | STATUS |
-| ----- | ----- |
-| Todos os inputs do formulário devem estar visíveis e habilitados | ✅ |
-| Todos os métodos de entrega devem estar visíveis e habiltiados | ✅ |
-| Deve finalizar o cadastro com o método de entrega 'Moto' | ✅ |
-| Deve finalizar o cadastro com o método de entrega 'Bike Elétrica' | ✅ |
-| Deve finalizar o cadastro com o método de entrega 'Van/Carro' | ✅ |
-| Deve exibir uma mensagem de erro para todos os campos obrigatorios | ✅ |
+##### Estrutura das pastas:
+```
+├── cypress/                                      # Diretório principal dos testes Cypress.
+    └── e2e  /                                    # Contém todos os testes E2E da aplicação.
+        └── deliver.cy.js                         # Teste E2E para cadastro de novos entregadores.
+        └── home_oage.cy.js                       # Teste E2E para validação de elementos da página inicial.
+    └── fixtures/                                 # Dados de teste e fixtures.
+        └── images                                
+            └── cnh.png                           # Documento fake para cadastro de entregadores.
+        └── json_structures                       # Dados de comparação para os testes.   
+            └── messages.json                     # JSON contendo todas as mensagens utilizadas para comparação/validação.    
+    └── support/                                  # Configurações de suporte do Cypress.
+        └── commands.js                           # Comandos customizados para testes E2E.
+        └── locators.js                           # Locators usando para interagir com os elementos da página.
+        └── e2e.js                                # Configurações globais para testes.
+    ├── package.json                              # Gerenciador de dependências e scripts do projeto .
+    └── README.md                                 # Documentação do projeto.
+```
+
+## Scripts de execução
+
+- 📝 Não foram adicionados scripts personalizados.
+
+```
+yarn cypress run          # Roda todos os testes em modo headless.
+yarn cypress open         # Roda todos os testes em modo interativo.
+```
