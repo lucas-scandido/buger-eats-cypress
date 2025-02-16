@@ -1,10 +1,13 @@
 {
-  "name": "buger-eats",
+  "name": "buger-eats-cypress",
   "version": "1.0.0",
+  "description": "Projeto de Automação de Testes E2E para a app Buger Eats",
   "main": "index.js",
+  "repository": "https://github.com/lucas-scandido/buger-eats-cypress.git",
+  "author": "Lucas da Silva Candido <luccasdasilvacandido@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^13.6.6",
+    "cypress": "^14.0.3",
     "cypress-drag-drop": "^1.1.1",
     "faker-br": "^0.4.1"
   }
